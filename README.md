@@ -10,11 +10,11 @@ These workflows offer a graphical and GPU-enabled platform that supports interac
 #### Widgets
 <ol>
   <li>Download: Used for downloading fast5 files or other starting data by providing a download link and output folder.</li> 
-  <li>Setup Guppy: Since Guppy is a proprietary basecaller, the [ONT](https://nanoporetech.com/) Guppy Software Download link needs to be provided by the user. This widget will proceed to download and install Guppy after the link is provided.</li> 
+  <li>Setup Guppy: Since Guppy is a proprietary basecaller, the <a href="https://nanoporetech.com/">ONT</a> Guppy Software Download link needs to be provided by the user. This widget will proceed to download and install Guppy after the link is provided.</li> 
   <li>Guppy (proprietary basecaller): After entering the required parameters (input-output directories and the specified model file), Guppy basecalling will proceed. It is highly recommended to use the GPU-enabled Guppy by marking the "Use GPU" checkbox before starting the widget.</li>
-  <li>Index ([Minimap2](https://github.com/lh3/minimap2)): Before aligning, it is required to create an index (.mmi) of the reference genome being used. This widget uses minimap2 to create an index which can then be used in the alignment step.</li>
-  <li>Align ([Minimap2](https://github.com/lh3/minimap2) + [Samtools](http://www.htslib.org/)): This widget uses minimap2 to align the basecalled reads to a reference genome, then sorts and indexes the output with Samtools. The resulting bam files are saved in the specified output directory.</li>
-  <li>View alignments ([IGV](https://software.broadinstitute.org/software/igv/)): The resulting bam files from alignment can be viewed within Integrated Genomics Viewer in this widget.</li>
+  <li>Index (<a href="https://github.com/lh3/minimap2">Minimap2</a>): Before aligning, it is required to create an index (.mmi) of the reference genome being used. This widget uses minimap2 to create an index which can then be used in the alignment step.</li>
+  <li>Align ( <a href="https://github.com/lh3/minimap2">Minimap2</a> + <a href="http://www.htslib.org/">Samtools</a>): This widget uses minimap2 to align the basecalled reads to a reference genome, then sorts and indexes the output with Samtools. The resulting bam files are saved in the specified output directory.</li>
+  <li>View alignments (<a href="https://software.broadinstitute.org/software/igv/">IGV</a>): The resulting bam files from alignment can be viewed within Integrated Genomics Viewer in this widget.</li>
 </ol>
 
 ### Bonito Workflow
