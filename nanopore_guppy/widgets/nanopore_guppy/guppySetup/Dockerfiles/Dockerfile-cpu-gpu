@@ -1,8 +1,0 @@
-FROM biodepot/guppy-base:buster-slim
-Maintainer lhhung
-ENV DEBIAN_FRONTEND=noninteractive
-ARG cpu_url
-ARG gpu_url
-RUN wget -qO- $cpu_url | tar -xzvf - 
-RUN wget -qO- $gpu_url | tar -xzvf -
-ENV PATH="${PWD}/ont-guppy-cpu:${PWD}/ont-guppy-gpu:${PATH}"

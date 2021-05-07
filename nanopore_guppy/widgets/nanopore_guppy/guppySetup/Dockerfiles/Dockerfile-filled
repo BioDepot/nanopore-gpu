@@ -1,6 +1,0 @@
-FROM nvidia/cuda:11.3.0-base-ubuntu20.04
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y wget rsync && rm -rf /var/lib/apt/lists/
-RUN wget -qO- https://mirror.oxfordnanoportal.com/software/analysis/ont-guppy_4.5.4_linux64.tar.gz | tar -xzvf -
-ENV PATH="${PWD}/ont-guppy/bin:${PATH}"
-COPY runGuppy.sh /usr/local/bin/runGuppy.sh

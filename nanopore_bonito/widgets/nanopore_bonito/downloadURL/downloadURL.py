@@ -11,16 +11,16 @@ from DockerClient import DockerClient
 from BwBase import OWBwBWidget, ConnectionDict, BwbGuiElements, getIconName, getJsonName
 from PyQt5 import QtWidgets, QtGui
 
-class OWguppySetup(OWBwBWidget):
-    name = "guppySetup"
+class OWdownloadURL(OWBwBWidget):
+    name = "downloadURL"
     description = "Downloads files from URL"
-    priority = 2
-    icon = getIconName(__file__,"guppy_build..png")
+    priority = 6
+    icon = getIconName(__file__,"download.png")
     want_main_area = False
-    docker_image_name = "biodepot/guppy-setup"
-    docker_image_tag = "test"
-    inputs = [("gpu_url",str,"handleInputsgpu_url"),("trigger",str,"handleInputstrigger")]
-    outputs = [("gpu_url",str)]
+    docker_image_name = "biodepot/downloadurl"
+    docker_image_tag = "alpine_3.13.2__b2680386"
+    inputs = [("directory",str,"handleInputsdirectory"),("trigger",str,"handleInputstrigger"),("URL",str,"handleInputsURL")]
+    outputs = [("directory",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -28,19 +28,22 @@ class OWguppySetup(OWBwBWidget):
     triggerReady=pset({})
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
-    gpu_url=pset(None)
-    overwrite=pset(False)
+    URL=pset([])
+    decompress=pset(True)
+    directory=pset(None)
+    concatenateFile=pset(None)
+    noClobber=pset(False)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
-        with open(getJsonName(__file__,"guppySetup")) as f:
+        with open(getJsonName(__file__,"downloadURL")) as f:
             self.data=jsonpickle.decode(f.read())
             f.close()
         self.initVolumes()
         self.inputConnections = ConnectionDict(self.inputConnectionsStore)
         self.drawGUI()
-    def handleInputsgpu_url(self, value, *args):
+    def handleInputsdirectory(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("gpu_url", value, args[0][0], test=args[0][3])
+            self.handleInputs("directory", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleInputstrigger(self, value, *args):
@@ -48,8 +51,13 @@ class OWguppySetup(OWBwBWidget):
             self.handleInputs("trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
+    def handleInputsURL(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("URL", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue="/data"
-        if hasattr(self,"gpu_url"):
-            outputValue=getattr(self,"gpu_url")
-        self.send("gpu_url", outputValue)
+        if hasattr(self,"directory"):
+            outputValue=getattr(self,"directory")
+        self.send("directory", outputValue)

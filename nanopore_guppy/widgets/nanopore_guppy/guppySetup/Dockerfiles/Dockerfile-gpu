@@ -1,7 +1,7 @@
-FROM nvidia/cuda:11.2.0-base-ubuntu20.04
+FROM nvidia/cuda:11.3.0-base-ubuntu20.04
 ENV DEBIAN_FRONTEND=noninteractive
 ARG gpu_url
-RUN apt-get update && apt-get install -y wget rsync && rm -rf /var/lib/apt/lists/
+RUN apt-get update && apt-get install -y wget bc rsync && rm -rf /var/lib/apt/lists/
 RUN wget -qO- $gpu_url | tar -xzvf -
 ENV PATH="${PWD}/ont-guppy/bin:${PATH}"
 COPY runGuppy.sh /usr/local/bin/runGuppy.sh
