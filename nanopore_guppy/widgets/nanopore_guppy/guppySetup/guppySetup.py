@@ -18,7 +18,7 @@ class OWguppySetup(OWBwBWidget):
     icon = getIconName(__file__,"guppy_build..png")
     want_main_area = False
     docker_image_name = "biodepot/guppy-setup"
-    docker_image_tag = "ubuntu_20.04__cuda_11.3__b055a49e"
+    docker_image_tag = "ubuntu_20.04__cuda_11.3__9f4d152a"
     inputs = [("gpu_url",str,"handleInputsgpu_url"),("trigger",str,"handleInputstrigger")]
     outputs = [("gpu_url",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
