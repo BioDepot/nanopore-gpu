@@ -31,6 +31,7 @@ class OWguppy(OWBwBWidget):
     InputDir=pset({})
     OutputDir=pset(None)
     modelFile=pset("ont-guppy/data/template_r9.4.1_450bps_hac.jsn")
+    configfile=pset(None)
     device=pset(None)
     flowcell=pset(None)
     kitname=pset(None)
