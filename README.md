@@ -1,5 +1,8 @@
 # nanopore-gpu
 
+## Citation: 
+A graphical, interactive and GPU-enabled workflow to process long-read sequencing data. Shishir Reddy, Ling-Hong Hung, Olga Sala-Torra, Jerald Radich, Cecilia CS Yeung, Ka Yee Yeung. BMC Genomics 22, Article number: 626 (2021) (https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-021-07927-1).
+
 ## Setup
 The project folders correspond to BioDepot-workflow-builder (BWB) workflows. BWB can be found and installed [here](https://github.com/BioDepot/BioDepot-workflow-builder).
 
