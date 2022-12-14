@@ -18,7 +18,7 @@ class OWbonito(OWBwBWidget):
     icon = getIconName(__file__,"bonito.png")
     want_main_area = False
     docker_image_name = "biodepot/bonito"
-    docker_image_tag = "0.3.8__ubuntu_18.04__cuda_10.2-cudnn7"
+    docker_image_tag = "latest"
     inputs = [("InputDir",str,"handleInputsInputDir"),("OutputDir",str,"handleInputsOutputDir"),("Trigger",str,"handleInputsTrigger")]
     outputs = [("OutputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

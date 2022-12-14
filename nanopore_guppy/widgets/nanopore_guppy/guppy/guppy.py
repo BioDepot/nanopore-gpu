@@ -18,7 +18,7 @@ class OWguppy(OWBwBWidget):
     icon = getIconName(__file__,"guppy1.png")
     want_main_area = False
     docker_image_name = "biodepot/guppy"
-    docker_image_tag = "gpu"
+    docker_image_tag = "latest"
     inputs = [("InputDir",str,"handleInputsInputDir"),("trigger",str,"handleInputstrigger"),("fastqdir",str,"handleInputsfastqdir"),("trigger2",str,"handleInputstrigger2")]
     outputs = [("OutputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

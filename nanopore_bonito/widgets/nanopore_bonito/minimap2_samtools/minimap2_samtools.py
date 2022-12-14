@@ -18,7 +18,7 @@ class OWminimap2_samtools(OWBwBWidget):
     icon = getIconName(__file__,"minimap2.png")
     want_main_area = False
     docker_image_name = "biodepot/minimap2_samtools"
-    docker_image_tag = "2.15-r905__1.9__3733bb34"
+    docker_image_tag = "latest"
     inputs = [("outputdir",str,"handleInputsoutputdir"),("indexfile",str,"handleInputsindexfile"),("inputFiles",str,"handleInputsinputFiles"),("trigger",str,"handleInputstrigger")]
     outputs = [("outputfile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

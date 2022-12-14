@@ -18,7 +18,7 @@ class OWStart(OWBwBWidget):
     icon = getIconName(__file__,"start.png")
     want_main_area = False
     docker_image_name = "biodepot/nanopore-start"
-    docker_image_tag = "alpine_3.12"
+    docker_image_tag = "latest"
     outputs = [("data_dir",str),("genome_dir",str),("genome_file",str),("indexfile",str),("gpu_url",str),("models_dir",str),("fastq_dir",str),("bam_dir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)

@@ -18,7 +18,7 @@ class OWbonito(OWBwBWidget):
     icon = getIconName(__file__,"bonito.png")
     want_main_area = False
     docker_image_name = "bonito-cpu"
-    docker_image_tag = "0.3.8"
+    docker_image_tag = "latest"
     inputs = [("modelName",str,"handleInputsmodelName"),("readsDirectory",str,"handleInputsreadsDirectory")]
     outputs = [("OutputFile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

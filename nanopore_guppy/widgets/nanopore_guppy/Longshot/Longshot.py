@@ -18,7 +18,7 @@ class OWLongshot(OWBwBWidget):
     icon = getIconName(__file__,"espresso.png")
     want_main_area = False
     docker_image_name = "longshot"
-    docker_image_tag = "0.3.5"
+    docker_image_tag = "latest"
     inputs = [("inputFile",str,"handleInputsinputFile"),("inputGenome",str,"handleInputsinputGenome"),("inputRegion",str,"handleInputsinputRegion")]
     outputs = [("outputFile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

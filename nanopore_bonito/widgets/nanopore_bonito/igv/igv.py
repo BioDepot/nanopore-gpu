@@ -18,7 +18,7 @@ class OWigv(OWBwBWidget):
     icon = getIconName(__file__,"igv.png")
     want_main_area = False
     docker_image_name = "biodepot/igv"
-    docker_image_tag = "2.9.2__ubuntu_20.04__4b93171f"
+    docker_image_tag = "latest"
     inputs = [("inputFile",str,"handleInputsinputFile"),("trigger",str,"handleInputstrigger")]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)

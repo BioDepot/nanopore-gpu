@@ -18,7 +18,7 @@ class OWminimap2_index(OWBwBWidget):
     icon = getIconName(__file__,"minimap2.png")
     want_main_area = False
     docker_image_name = "biodepot/minimap2-index"
-    docker_image_tag = "2.15-r905__d5c53a99"
+    docker_image_tag = "latest"
     inputs = [("indexfile",str,"handleInputsindexfile"),("RefGenome",str,"handleInputsRefGenome"),("trigger",str,"handleInputstrigger")]
     outputs = [("indexfile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
