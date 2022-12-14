@@ -13,6 +13,7 @@ function checkFilename(){
 }
 
 function getFilename(){
+    curlret=0
     unset filename
     echo "finding filename for url $url"
     tempDir="$(mktemp -d /tmp/XXXXXXXXX)"
@@ -34,9 +35,19 @@ function findGoogleFilename(){
     fi
     echo "fileID is ${fileID}"
     filename=$(curl -s -L "$1" | sed -n -e 's/.*<meta property\="og\:title" content\="//p' | sed -n -e 's/">.*//p')
+    echo curl -s -L "$1" 
+    [ -z "$filename" ] && echo "Unable to find filename - cannot download from google" &&  exit 1
+    #try to get download code from session cookie
     echo "filename is $filename"
-    bash -c "curl -c ./cookie 'https://drive.google.com/uc?export=download&id=${fileID}' &> /dev/null"
+    echo "curl -s  -c ./cookie 'https://drive.google.com/uc?export=download&id=${fileID}'"
+    formText=$(curl -s -c ./cookie "https://drive.google.com/uc?export=download&id=${fileID}")
     code=$(cat ./cookie | grep -o 'download_warning.*' | cut -f2)
+    [[ -z "$code" ]] && code=$(echo "$formText"  | grep -oP '(?<=;confirm=).*(?=\" method)')
+    #code= $(echo $text | grep -oP '(?<=;confirm=).*(?=\" method)')
+    echo $formText
+    echo $code
+    #echo "curl -c ./cookie 'https://drive.google.com/uc?export=download&id=${fileID}' &> /dev/null"
+
     if [[ -n "$code" ]]; then
         echo "code is $code"
     else
@@ -155,7 +166,7 @@ for url in "${urls[@]}" ; do
                 shift
                 continue
             fi
-            if [ -z $code ]; then
+            if [ -z "$code" ]; then
                 echo No problem with virus check no verification needed
                 cmd="curl -L 'https://docs.google.com/uc?export=download&id=${fileID}' "
             else
@@ -169,7 +180,7 @@ for url in "${urls[@]}" ; do
             echo "$cmd"
             bash -c "$cmd"
             curlret=$?
-            rm ./cookie
+            rm -f ./cookie
         else
             echo "did not download $url - can't find filename - authentication may be required"
         fi
@@ -229,9 +240,9 @@ for url in "${urls[@]}" ; do
             fi
             echo "$cmd"
             $cmd
-            curlret=$?
+            #curlret=$?
         fi
-    fi
+    fi   
     if [ $curlret -ne 0 ]; then
         status=1
     fi
