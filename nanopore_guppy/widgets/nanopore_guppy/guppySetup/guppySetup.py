@@ -30,6 +30,7 @@ class OWguppySetup(OWBwBWidget):
     optionsChecked=pset({})
     gpu_url=pset(None)
     overwrite=pset(False)
+    cudaversion=pset("11.3.1")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"guppySetup")) as f:
