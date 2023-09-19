@@ -19,7 +19,7 @@ class OWigv(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/igv"
     docker_image_tag = "latest"
-    inputs = [("inputFile",str,"handleInputsinputFile"),("trigger",str,"handleInputstrigger")]
+    inputs = [("inputFile",str,"handleInputsinputFile"),("trigger",str,"handleInputstrigger"),("dataVolume",str,"handleInputsdataVolume")]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -31,6 +31,7 @@ class OWigv(OWBwBWidget):
     genome=pset("hg38")
     batch=pset(None)
     autoDetermineRegions=pset(True)
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"igv")) as f:
@@ -47,5 +48,10 @@ class OWigv(OWBwBWidget):
     def handleInputstrigger(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("trigger", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)

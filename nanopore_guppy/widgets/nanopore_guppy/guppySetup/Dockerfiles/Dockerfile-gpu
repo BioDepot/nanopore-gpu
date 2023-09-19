@@ -1,8 +1,12 @@
-ARG CUDA_VERSION=11.3.1
-FROM nvidia/cuda:${CUDA_VERSION}-base-ubuntu20.04
+<<<<<<< Updated upstream
+FROM nvidia/cuda:11.3.0-base-ubuntu20.04
+=======
+ARG CUDA_VERSION=11.5.2
+FROM nvidia/cuda:${CUDA_VERSION}-cudnn8-devel-ubuntu20.04
+>>>>>>> Stashed changes
 ENV DEBIAN_FRONTEND=noninteractive
 ARG gpu_url
-RUN apt-get update && apt-get install -y wget bc rsync && rm -rf /var/lib/apt/lists/
+RUN apt-get update && apt-get install -y wget bc rsync 
 RUN wget -qO- $gpu_url | tar -xzvf -
 ENV PATH="${PWD}/ont-guppy/bin:${PATH}"
 COPY runGuppy.sh /usr/local/bin/runGuppy.sh

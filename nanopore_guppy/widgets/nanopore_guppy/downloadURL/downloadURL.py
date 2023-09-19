@@ -19,7 +19,7 @@ class OWdownloadURL(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/downloadurl"
     docker_image_tag = "latest"
-    inputs = [("directory",str,"handleInputsdirectory"),("trigger",str,"handleInputstrigger"),("URL",str,"handleInputsURL")]
+    inputs = [("directory",str,"handleInputsdirectory"),("trigger",str,"handleInputstrigger"),("URL",str,"handleInputsURL"),("dataVolume",str,"handleInputsdataVolume")]
     outputs = [("directory",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -33,6 +33,7 @@ class OWdownloadURL(OWBwBWidget):
     directory=pset(None)
     concatenateFile=pset(None)
     noClobber=pset(False)
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"downloadURL")) as f:
@@ -54,6 +55,11 @@ class OWdownloadURL(OWBwBWidget):
     def handleInputsURL(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("URL", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):

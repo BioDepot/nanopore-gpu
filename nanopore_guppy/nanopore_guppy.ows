@@ -1,13 +1,13 @@
 <?xml version="1.0" ?><scheme description="" title="nanopore-guppy" version="2.0">
 	<nodes>
-		<node id="0" name="guppy" position="(-537.0, 319.75)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWguppy.OWguppy" title="Guppy (proprietary basecaller)" version=""/>
-		<node id="1" name="minimap2_index" position="(-690.0, 472.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWminimap2_index.OWminimap2_index" title="Index (Minimap2)" version=""/>
-		<node id="2" name="minimap2_samtools" position="(-539.0, 472.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWminimap2_samtools.OWminimap2_samtools" title="Align (Minimap2 + Samtools)" version=""/>
-		<node id="3" name="Start" position="(-850.0, 62.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWStart.OWStart" title="Start" version=""/>
-		<node id="4" name="downloadURL" position="(-690.0, 172.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWdownloadURL.OWdownloadURL" title="Download genome sequence" version=""/>
-		<node id="5" name="guppySetup" position="(-690.0, 323.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWguppySetup.OWguppySetup" title="Setup guppy" version=""/>
-		<node id="6" name="downloadURL" position="(-541.0, 172.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWdownloadURL.OWdownloadURL" title="Download fast5 files" version=""/>
-		<node id="7" name="igv" position="(-689.0, 622.0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWigv.OWigv" title="View alignments" version=""/>
+		<node id="0" name="guppy" position="(-600, 300)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWguppy.OWguppy" title="Guppy (proprietary basecaller)" version=""/>
+		<node id="1" name="minimap2_index" position="(-750, 450)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWminimap2_index.OWminimap2_index" title="Index (Minimap2)" version=""/>
+		<node id="2" name="minimap2_samtools" position="(-600, 450)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWminimap2_samtools.OWminimap2_samtools" title="Align (Minimap2 + Samtools)" version=""/>
+		<node id="3" name="Start" position="(-900, 0)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWStart.OWStart" title="Start" version=""/>
+		<node id="4" name="downloadURL" position="(-750, 150)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWdownloadURL.OWdownloadURL" title="Download genome sequence" version=""/>
+		<node id="5" name="guppySetup" position="(-750, 300)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWguppySetup.OWguppySetup" title="Setup guppy" version=""/>
+		<node id="6" name="downloadURL" position="(-600, 150)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWdownloadURL.OWdownloadURL" title="Download fast5 files" version=""/>
+		<node id="7" name="igv" position="(-750, 600)" project_name="nanopore-guppy" qualified_name="nanopore_guppy.OWigv.OWigv" title="View alignments" version=""/>
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="indexfile" sink_node_id="1" source_channel="indexfile" source_node_id="3"/>
@@ -40,107 +40,107 @@ YS9GQUszMDIwNi9xDGV1WAkAAABPdXRwdXREaXJxDV1xDihYIQAAAC9kYXRhL25hbm9wb3JlLXRl
 c3Qvb3V0cHV0L0FBVzI1NHEPWCMAAAAvZGF0YS9uYW5vcG9yZS10ZXN0L291dHB1dC9GQUszMDIw
 NnEQZVgPAAAAY2h1bmtzUGVyUnVubmVycRFN6ANYDQAAAGNvbXByZXNzZmFzdHFxEohYCgAAAGNv
 bmZpZ2ZpbGVxE1gZAAAAZG5hX3I5LjQuMV80NTBicHNfaGFjLmNmZ3EUWBIAAABjb250cm9sQXJl
-YVZpc2libGVxFYhYBgAAAGRldmljZXEWWAQAAABhdXRvcRdYDgAAAGV4cG9ydEdyYXBoaWNzcRiJ
-WAgAAABmYXN0cWRpcnEZWBkAAAAvZGF0YS9uYW5vcG9yZS10ZXN0L2Zhc3RxcRpYCAAAAGZsb3dj
-ZWxscRtYAAAAAHEcWBMAAABncHVSdW5uZXJzUGVyRGV2aWNlcR1LAFgVAAAAaW5wdXRDb25uZWN0
-aW9uc1N0b3JlcR59cR8oWAgAAABpbnB1dERpcnEgXXEhSwNhWAgAAAB0cmlnZ2VyMnEiXXEjSwNh
-WAcAAAB0cmlnZ2VycSRdcSVLB2FYCAAAAGZhc3RxZGlycSZdcSdLAWF1WAcAAABpdGVyYXRlcSiJ
-WA8AAABpdGVyYXRlU2V0dGluZ3NxKX1xKihYDQAAAGl0ZXJhYmxlQXR0cnNxK11xLFgIAAAASW5w
-dXREaXJxLWFYCAAAAG5Xb3JrZXJzcS5LAVgEAAAAZGF0YXEvY2NvbGxlY3Rpb25zCk9yZGVyZWRE
-aWN0CnEwKVJxMShYCAAAAElucHV0RGlycTJ9cTMoWAkAAABncm91cFNpemVxNFgBAAAAMXE1WAcA
-AAB0aHJlYWRzcTZoNVgDAAAAcmFtcTdYAQAAADBxOHVYCQAAAE91dHB1dERpcnE5fXE6KGg0aDVo
-Nmg1aDdoOHVYCQAAAG1vZGVsRmlsZXE7fXE8KGg0aDVoNmg1aDdoOHVYCgAAAGNvbmZpZ2ZpbGVx
-PX1xPihoNGg1aDZoNWg3aDh1WAYAAABkZXZpY2VxP31xQChoNGg1aDZoNWg3aDh1WAgAAABmbG93
-Y2VsbHFBfXFCKGg0aDVoNmg1aDdoOHVYBwAAAGtpdG5hbWVxQ31xRChoNGg1aDZoNWg3aDh1dVgN
-AAAAaXRlcmF0ZWRBdHRyc3FFXXFGKGgyaDloO2g9aD9ldVgHAAAAa2l0bmFtZXFHaBxYCQAAAG1v
-ZGVsRmlsZXFIWB4AAAB0ZW1wbGF0ZV9yOS40LjFfNDUwYnBzX2hhYy5qc25xSVgIAAAAbldvcmtl
-cnNxSksBWAoAAABudW1DYWxsZXJzcUtLAFgOAAAAb3B0aW9uc0NoZWNrZWRxTH1xTShYCgAAAGNv
-bmZpZ2ZpbGVxTohYBgAAAGRldmljZXFPiFgIAAAAZmxvd2NlbGxxUIlYBwAAAGtpdG5hbWVxUYlY
-DQAAAGNvbXByZXNzZmFzdHFxUolYDwAAAGNodW5rc1BlclJ1bm5lcnFTiVgKAAAAbnVtQ2FsbGVy
-c3FUiVgTAAAAZ3B1UnVubmVyc1BlckRldmljZXFViXVYBwAAAHJ1bk1vZGVxVksCWAsAAABydW5U
-cmlnZ2Vyc3FXXXFYKFgHAAAAdHJpZ2dlcnFZWAgAAAB0cmlnZ2VyMnFaWAgAAABmYXN0cWRpcnFb
-ZVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXFcQzIB2dDLAAIAAAAAAsAAAACbAAAGnAAAA0sAAALA
-AAAAswAABpwAAANIAAAAAAAAAAAHgHFdWAwAAAB0cmlnZ2VyUmVhZHlxXn1xXyhYCAAAAElucHV0
-RGlycWCJWAcAAAB0cmlnZ2VycWGIWAkAAABPdXRwdXREaXJxYoloWohoW4h1WAYAAAB1c2VHcHVx
-Y4hYDAAAAHVzZVNjaGVkdWxlcnFkiVgLAAAAX192ZXJzaW9uX19xZUsBdS4=
+YVZpc2libGVxFYhYCgAAAGRhdGFWb2x1bWVxFlgFAAAAL2RhdGFxF1gGAAAAZGV2aWNlcRhYAwAA
+AGNwdXEZWA4AAABleHBvcnRHcmFwaGljc3EaiVgIAAAAZmFzdHFkaXJxG1gZAAAAL2RhdGEvbmFu
+b3BvcmUtdGVzdC9mYXN0cXEcWAgAAABmbG93Y2VsbHEdWAAAAABxHlgTAAAAZ3B1UnVubmVyc1Bl
+ckRldmljZXEfSwBYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEgfXEhKFgIAAAAaW5wdXREaXJx
+Il1xI0sDYVgIAAAAdHJpZ2dlcjJxJF1xJUsDYVgHAAAAdHJpZ2dlcnEmXXEnSwdhWAgAAABmYXN0
+cWRpcnEoXXEpSwFhdVgHAAAAaXRlcmF0ZXEqiVgPAAAAaXRlcmF0ZVNldHRpbmdzcSt9cSwoWA0A
+AABpdGVyYWJsZUF0dHJzcS1dcS5YCAAAAElucHV0RGlycS9hWAgAAABuV29ya2Vyc3EwSwFYBAAA
+AGRhdGFxMWNjb2xsZWN0aW9ucwpPcmRlcmVkRGljdApxMilScTMoWAgAAABJbnB1dERpcnE0fXE1
+KFgJAAAAZ3JvdXBTaXplcTZYAQAAADFxN1gHAAAAdGhyZWFkc3E4aDdYAwAAAHJhbXE5WAEAAAAw
+cTp1WAkAAABPdXRwdXREaXJxO31xPChoNmg3aDhoN2g5aDp1WAkAAABtb2RlbEZpbGVxPX1xPiho
+Nmg3aDhoN2g5aDp1WAoAAABjb25maWdmaWxlcT99cUAoaDZoN2g4aDdoOWg6dVgGAAAAZGV2aWNl
+cUF9cUIoaDZoN2g4aDdoOWg6dVgIAAAAZmxvd2NlbGxxQ31xRChoNmg3aDhoN2g5aDp1WAcAAABr
+aXRuYW1lcUV9cUYoaDZoN2g4aDdoOWg6dXVYDQAAAGl0ZXJhdGVkQXR0cnNxR11xSChoNGg7aD1o
+P2hBZXVYBwAAAGtpdG5hbWVxSWgeWAkAAABtb2RlbEZpbGVxSlgeAAAAdGVtcGxhdGVfcjkuNC4x
+XzQ1MGJwc19oYWMuanNucUtYCAAAAG5Xb3JrZXJzcUxLAVgKAAAAbnVtQ2FsbGVyc3FNSwBYDgAA
+AG9wdGlvbnNDaGVja2VkcU59cU8oWAoAAABjb25maWdmaWxlcVCIWAYAAABkZXZpY2VxUYhYCAAA
+AGZsb3djZWxscVKJWAcAAABraXRuYW1lcVOJWA0AAABjb21wcmVzc2Zhc3RxcVSJWA8AAABjaHVu
+a3NQZXJSdW5uZXJxVYlYCgAAAG51bUNhbGxlcnNxVolYEwAAAGdwdVJ1bm5lcnNQZXJEZXZpY2Vx
+V4l1WAcAAABydW5Nb2RlcVhLAlgLAAAAcnVuVHJpZ2dlcnNxWV1xWihYBwAAAHRyaWdnZXJxW1gI
+AAAAdHJpZ2dlcjJxXFgIAAAAZmFzdHFkaXJxXWVYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxXkMy
+AdnQywACAAAAAABJAAABAQAAA30AAANOAAAASQAAARkAAAN9AAADSwAAAAAAAAAAB4BxX1gMAAAA
+dHJpZ2dlclJlYWR5cWB9cWEoWAgAAABJbnB1dERpcnFiiVgHAAAAdHJpZ2dlcnFjiFgJAAAAT3V0
+cHV0RGlycWSJaFyIaF2IdVgGAAAAdXNlR3B1cWWJWAwAAAB1c2VTY2hlZHVsZXJxZolYCwAAAF9f
+dmVyc2lvbl9fcWdLAXUu
 </properties>
-		<properties format="literal" node_id="1">{'RefGenome': '/data/nanopore-test/genome/hg38.fa.gz', 'altcontigs': '', 'altdrop': 0.15, 'controlAreaVisible': True, 'exportGraphics': False, 'hpcminimizer': False, 'idxnoseq': False, 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {'refGenome': [1], 'indexfile': [1], 'RefGenome': [1], 'trigger': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'kmersize': 15, 'maxload': '', 'nWorkers': 1, 'optionsChecked': {'kmersize': False, 'windowsize': False, 'hpcminimizer': False, 'maxload': False, 'idxnoseq': False, 'altcontigs': False, 'altdrop': False, 'overwrite': False}, 'overwrite': False, 'runMode': 2, 'runTriggers': ['indexfile', 'RefGenome', 'trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\x8e\x00\x00\x00\x9d\x00\x00\x06\xb6\x00\x00\x03\x1c\x00\x00\x01\x8e\x00\x00\x00\x9d\x00\x00\x06\xb6\x00\x00\x03\x1c\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'trigger': True, 'indexfile': True, 'refGenome': False, 'RefGenome': True}, 'useGpu': False, 'useScheduler': False, 'windowsize': 0, '__version__': 1}</properties>
+		<properties format="literal" node_id="1">{'RefGenome': '/data/nanopore-test/genome/hg38.fa.gz', 'altcontigs': '', 'altdrop': 0.15, 'controlAreaVisible': True, 'dataVolume': '/data', 'exportGraphics': False, 'hpcminimizer': False, 'idxnoseq': False, 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {'refGenome': [1], 'indexfile': [1], 'RefGenome': [1], 'trigger': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'kmersize': 15, 'maxload': '', 'nWorkers': 1, 'optionsChecked': {'kmersize': False, 'windowsize': False, 'hpcminimizer': False, 'maxload': False, 'idxnoseq': False, 'altcontigs': False, 'altdrop': False, 'overwrite': False}, 'overwrite': False, 'runMode': 2, 'runTriggers': ['indexfile', 'RefGenome', 'trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00d\x00\x00\x00\xa9\x00\x00\x03\xa2\x00\x00\x03K\x00\x00\x00d\x00\x00\x00\xc1\x00\x00\x03\xa2\x00\x00\x03H\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'trigger': True, 'indexfile': True, 'refGenome': False, 'RefGenome': True}, 'useGpu': False, 'useScheduler': False, 'windowsize': 0, '__version__': 1}</properties>
 		<properties format="pickle" node_id="2">gAN9cQAoWAoAAABJbnB1dEZpbGVzcQF9cQIoWAQAAAByb290cQNYGgAAAC9kYXRhL25hbm9wb3Jl
 LXRlc3QvZmFzdHEvcQRYBwAAAHBhdHRlcm5xBVgKAAAAKi5mYXN0cS5nenEGWAgAAABmaW5kRmls
-ZXEHiFgHAAAAZmluZERpcnEIiVgFAAAAdmFsdWVxCV1xCihYKQAAAC9kYXRhL25hbm9wb3JlLXRl
-c3QvZmFzdHEvQUFXMjU0LmZhc3RxLmd6cQtYKwAAAC9kYXRhL25hbm9wb3JlLXRlc3QvZmFzdHEv
-RkFLMzAyMDYuZmFzdHEuZ3pxDGV1WBIAAABjb250cm9sQXJlYVZpc2libGVxDYhYDgAAAGV4cG9y
-dEdyYXBoaWNzcQ6JWAkAAABpbmRleGZpbGVxD1gjAAAAL2RhdGEvbmFub3BvcmUtdGVzdC9nZW5v
-bWUvaGczOC5pZHhxEFgVAAAAaW5wdXRDb25uZWN0aW9uc1N0b3JlcRF9cRIoWAkAAABvdXRwdXRk
-aXJxE11xFEsBYVgJAAAAaW5kZXhmaWxlcRVdcRZLAmFYBwAAAHRyaWdnZXJxF11xGEsIYXVYBwAA
-AGl0ZXJhdGVxGYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3EafXEbKFgNAAAAaXRlcmFibGVBdHRyc3Ec
-XXEdWAoAAABJbnB1dEZpbGVzcR5hWAQAAABkYXRhcR9jY29sbGVjdGlvbnMKT3JkZXJlZERpY3QK
-cSApUnEhWAoAAABJbnB1dEZpbGVzcSJ9cSMoWAkAAABncm91cFNpemVxJFgBAAAAMXElWAcAAAB0
-aHJlYWRzcSZoJVgDAAAAcmFtcSdYAQAAADBxKHVzWA0AAABpdGVyYXRlZEF0dHJzcSldcSpoImFY
-CAAAAG5Xb3JrZXJzcStLAnVYCAAAAG5Xb3JrZXJzcSxLAlgNAAAAb3B0aW9uYWxmbGFnc3EtWAQA
-AAAtdCAzcS5YDgAAAG9wdGlvbnNDaGVja2VkcS99cTBYDQAAAG9wdGlvbmFsZmxhZ3NxMYhzWAkA
-AABvdXRwdXRkaXJxMlgXAAAAL2RhdGEvbmFub3BvcmUtdGVzdC9iYW1xM1gHAAAAcnVuTW9kZXE0
-SwJYCwAAAHJ1blRyaWdnZXJzcTVdcTYoWAcAAAB0cmlnZ2VycTdYCQAAAGluZGV4ZmlsZXE4ZVgT
-AAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXE5QzIB2dDLAAIAAAAAARoAAAB/AAAGwAAAAysAAAEaAAAA
-fwAABsAAAAMrAAAAAAAAAAAHgHE6WAwAAAB0cmlnZ2VyUmVhZHlxO31xPChoN4hoOIh1WAYAAAB1
-c2VHcHVxPYlYDAAAAHVzZVNjaGVkdWxlcnE+iVgLAAAAX192ZXJzaW9uX19xP0sBdS4=
+ZXEHiFgHAAAAZmluZERpcnEIiVgFAAAAdmFsdWVxCV1xCnVYEgAAAGNvbnRyb2xBcmVhVmlzaWJs
+ZXELiFgKAAAAZGF0YVZvbHVtZXEMWAUAAAAvZGF0YXENWA4AAABleHBvcnRHcmFwaGljc3EOiVgJ
+AAAAaW5kZXhmaWxlcQ9YIwAAAC9kYXRhL25hbm9wb3JlLXRlc3QvZ2Vub21lL2hnMzguaWR4cRBY
+FQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXERfXESKFgJAAAAb3V0cHV0ZGlycRNdcRRLAWFYCQAA
+AGluZGV4ZmlsZXEVXXEWSwJhWAcAAAB0cmlnZ2VycRddcRhLCGF1WAcAAABpdGVyYXRlcRmIWA8A
+AABpdGVyYXRlU2V0dGluZ3NxGn1xGyhYDQAAAGl0ZXJhYmxlQXR0cnNxHF1xHVgKAAAASW5wdXRG
+aWxlc3EeYVgEAAAAZGF0YXEfY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEgKVJxIVgKAAAASW5w
+dXRGaWxlc3EifXEjKFgJAAAAZ3JvdXBTaXplcSRYAQAAADFxJVgHAAAAdGhyZWFkc3EmaCVYAwAA
+AHJhbXEnWAEAAAAwcSh1c1gNAAAAaXRlcmF0ZWRBdHRyc3EpXXEqaCJhWAgAAABuV29ya2Vyc3Er
+SwJ1WAgAAABuV29ya2Vyc3EsSwJYDQAAAG9wdGlvbmFsZmxhZ3NxLVgEAAAALXQgM3EuWA4AAABv
+cHRpb25zQ2hlY2tlZHEvfXEwWA0AAABvcHRpb25hbGZsYWdzcTGIc1gJAAAAb3V0cHV0ZGlycTJY
+FwAAAC9kYXRhL25hbm9wb3JlLXRlc3QvYmFtcTNYBwAAAHJ1bk1vZGVxNEsCWAsAAABydW5Ucmln
+Z2Vyc3E1XXE2KFgHAAAAdHJpZ2dlcnE3WAkAAABpbmRleGZpbGVxOGVYEwAAAHNhdmVkV2lkZ2V0
+R2VvbWV0cnlxOUMyAdnQywACAAAAAABrAAAA2AAAA3sAAAMnAAAAawAAAPAAAAN7AAADJAAAAAAA
+AAAAB4BxOlgMAAAAdHJpZ2dlclJlYWR5cTt9cTwoaDeIaDiIdVgGAAAAdXNlR3B1cT2JWAwAAAB1
+c2VTY2hlZHVsZXJxPolYCwAAAF9fdmVyc2lvbl9fcT9LAXUu
 </properties>
-		<properties format="literal" node_id="3">{'bam_dir': '/data/nanopore-test/bam', 'controlAreaVisible': True, 'data_dir': '/data/nanopore-test/data', 'exportGraphics': False, 'fastq_dir': '/data/nanopore-test/fastq', 'genome_dir': '/data/nanopore-test/genome', 'genome_file': '/data/nanopore-test/genome/hg38.fa.gz', 'gpu_url': 'https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy_6.5.7_linux64.tar.gz', 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'models_dir': '', 'nWorkers': 1, 'optionsChecked': {'gdc_credentials': False, 'gdc_token': False, 'clean_files': False, 'fastq_files': False, 'fastq1_files': False, 'fastq2_files': False, 'fastqo1_files': False, 'fastqo2_files': False, 'fastqs_files': False, 'fastqc_files': False, 'paired_end': False, 'realigned_files': False, 'recalibrate_files': False, 'realigned_indels_files': False, 'pindel_filter_files': False, 'genome_dict_file': False, 'biobambam_files': False, 'mutect2_normal_files': False, 'mutect2_tumor_files': False, 'mutect2_variants_files': False, 'variant_annotation_files': False, 'maf_files': False, 'mark_dupes_outputs': False, 'mark_dupes_metrics': False, 'coclean_intervals': False, 'somatic_sniper_files': False, 'prepend_date': False, 'varscan_pileup_files': False, 'varscan_snp_files': False, 'varscan_indel_files': False, 'muse_call_files': False, 'muse_sump_input_files': False, 'muse_sump_output_files': False, 'pindel_config_files': False, 'pindel_variants_files': False, 'pindel_variants_sorted_files': False, 'pindel_variants_filtered_files': False, 'pindel_prefix_files': False, 'cpu_url': False, 'gpu_url': True, 'models_dir': False}, 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03$\x00\x00\x01w\x00\x00\x05\x99\x00\x00\x02\xca\x00\x00\x03$\x00\x00\x01w\x00\x00\x05\x99\x00\x00\x02\xca\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="3">{'bam_dir': '/data/nanopore-test/bam', 'controlAreaVisible': True, 'dataVolume': '/root', 'data_dir': '/data/nanopore-test/data', 'exportGraphics': False, 'fastq_dir': '/data/nanopore-test/fastq', 'genome_dir': '/data/nanopore-test/genome', 'genome_file': '/data/nanopore-test/genome/hg38.fa.gz', 'gpu_url': 'https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy_6.5.7_linux64.tar.gz', 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'models_dir': '', 'nWorkers': 1, 'optionsChecked': {'gdc_credentials': False, 'gdc_token': False, 'clean_files': False, 'fastq_files': False, 'fastq1_files': False, 'fastq2_files': False, 'fastqo1_files': False, 'fastqo2_files': False, 'fastqs_files': False, 'fastqc_files': False, 'paired_end': False, 'realigned_files': False, 'recalibrate_files': False, 'realigned_indels_files': False, 'pindel_filter_files': False, 'genome_dict_file': False, 'biobambam_files': False, 'mutect2_normal_files': False, 'mutect2_tumor_files': False, 'mutect2_variants_files': False, 'variant_annotation_files': False, 'maf_files': False, 'mark_dupes_outputs': False, 'mark_dupes_metrics': False, 'coclean_intervals': False, 'somatic_sniper_files': False, 'prepend_date': False, 'varscan_pileup_files': False, 'varscan_snp_files': False, 'varscan_indel_files': False, 'muse_call_files': False, 'muse_sump_input_files': False, 'muse_sump_output_files': False, 'pindel_config_files': False, 'pindel_variants_files': False, 'pindel_variants_sorted_files': False, 'pindel_variants_filtered_files': False, 'pindel_prefix_files': False, 'cpu_url': False, 'gpu_url': True, 'models_dir': False}, 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\x1b\x00\x00\x00w\x00\x00\x03\xc9\x00\x00\x02\xd6\x00\x00\x00\x1b\x00\x00\x00w\x00\x00\x03\xc9\x00\x00\x02\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="4">gAN9cQAoWAMAAABVUkxxAV1xAlhCAAAAaHR0cHM6Ly9oZ2Rvd25sb2FkLnNvZS51Y3NjLmVkdS9n
 b2xkZW5QYXRoL2hnMzgvYmlnWmlwcy9oZzM4LmZhLmd6cQNhWA8AAABjb25jYXRlbmF0ZUZpbGVx
-BFgAAAAAcQVYEgAAAGNvbnRyb2xBcmVhVmlzaWJsZXEGiFgKAAAAZGVjb21wcmVzc3EHiVgJAAAA
-ZGlyZWN0b3J5cQhYGgAAAC9kYXRhL25hbm9wb3JlLXRlc3QvZ2Vub21lcQlYDgAAAGV4cG9ydEdy
-YXBoaWNzcQqJWBUAAABpbnB1dENvbm5lY3Rpb25zU3RvcmVxC31xDFgJAAAAZGlyZWN0b3J5cQ1d
-cQ5LAWFzWAcAAABpdGVyYXRlcQ+JWA8AAABpdGVyYXRlU2V0dGluZ3NxEH1xEShYDQAAAGl0ZXJh
-YmxlQXR0cnNxEl1xE1gDAAAAVVJMcRRhWAgAAABuV29ya2Vyc3EVSwFYBAAAAGRhdGFxFmNjb2xs
-ZWN0aW9ucwpPcmRlcmVkRGljdApxFylScRgoWAMAAABVUkxxGX1xGihYCQAAAGdyb3VwU2l6ZXEb
-WAEAAAAxcRxYBwAAAHRocmVhZHNxHWgcWAMAAAByYW1xHlgBAAAAMHEfdVgJAAAAZGlyZWN0b3J5
-cSB9cSEoaBtoHGgdaBxoHmgfdXVYDQAAAGl0ZXJhdGVkQXR0cnNxIl1xIyhoGWggZXVYCAAAAG5X
-b3JrZXJzcSRLAVgJAAAAbm9DbG9iYmVycSWIWA4AAABvcHRpb25zQ2hlY2tlZHEmfXEnKFgKAAAA
-ZGVjb21wcmVzc3EoiVgPAAAAY29uY2F0ZW5hdGVGaWxlcSmJWAkAAABub0Nsb2JiZXJxKol1WAcA
-AABydW5Nb2RlcStLAlgLAAAAcnVuVHJpZ2dlcnNxLF1xLVgJAAAAZGlyZWN0b3J5cS5hWBMAAABz
-YXZlZFdpZGdldEdlb21ldHJ5cS9DMgHZ0MsAAgAAAAADqwAAAEIAAAaXAAABswAAA6sAAABCAAAG
-lwAAAbMAAAAAAAAAAAeAcTBYDAAAAHRyaWdnZXJSZWFkeXExfXEyWAkAAABkaXJlY3RvcnlxM4hz
-WAYAAAB1c2VHcHVxNIlYDAAAAHVzZVNjaGVkdWxlcnE1iVgLAAAAX192ZXJzaW9uX19xNksBdS4=
+BFgAAAAAcQVYEgAAAGNvbnRyb2xBcmVhVmlzaWJsZXEGiFgKAAAAZGF0YVZvbHVtZXEHWAUAAAAv
+cm9vdHEIWAoAAABkZWNvbXByZXNzcQmJWAkAAABkaXJlY3RvcnlxClgaAAAAL2RhdGEvbmFub3Bv
+cmUtdGVzdC9nZW5vbWVxC1gOAAAAZXhwb3J0R3JhcGhpY3NxDIlYFQAAAGlucHV0Q29ubmVjdGlv
+bnNTdG9yZXENfXEOWAkAAABkaXJlY3RvcnlxD11xEEsBYXNYBwAAAGl0ZXJhdGVxEYlYDwAAAGl0
+ZXJhdGVTZXR0aW5nc3ESfXETKFgNAAAAaXRlcmFibGVBdHRyc3EUXXEVWAMAAABVUkxxFmFYCAAA
+AG5Xb3JrZXJzcRdLAVgEAAAAZGF0YXEYY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEZKVJxGihY
+AwAAAFVSTHEbfXEcKFgJAAAAZ3JvdXBTaXplcR1YAQAAADFxHlgHAAAAdGhyZWFkc3EfaB5YAwAA
+AHJhbXEgWAEAAAAwcSF1WAkAAABkaXJlY3RvcnlxIn1xIyhoHWgeaB9oHmggaCF1dVgNAAAAaXRl
+cmF0ZWRBdHRyc3EkXXElKGgbaCJldVgIAAAAbldvcmtlcnNxJksBWAkAAABub0Nsb2JiZXJxJ4hY
+DgAAAG9wdGlvbnNDaGVja2VkcSh9cSkoWAoAAABkZWNvbXByZXNzcSqJWA8AAABjb25jYXRlbmF0
+ZUZpbGVxK4lYCQAAAG5vQ2xvYmJlcnEsiXVYBwAAAHJ1bk1vZGVxLUsCWAsAAABydW5UcmlnZ2Vy
+c3EuXXEvWAkAAABkaXJlY3RvcnlxMGFYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxMUMyAdnQywAC
+AAAAAABtAAAA/QAAA1kAAAK7AAAAbQAAAP0AAANZAAACuwAAAAAAAAAAB4BxMlgMAAAAdHJpZ2dl
+clJlYWR5cTN9cTRYCQAAAGRpcmVjdG9yeXE1iHNYBgAAAHVzZUdwdXE2iVgMAAAAdXNlU2NoZWR1
+bGVycTeJWAsAAABfX3ZlcnNpb25fX3E4SwF1Lg==
 </properties>
-		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'cudaversion': '11.3.1', 'exportGraphics': False, 'gpu_url': 'https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy_6.5.7_linux64.tar.gz', 'inputConnectionsStore': {'gpu_url': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'decompress': False, 'concatenateFile': False, 'guppyCPUurl': False, 'guppyGPUurl': False, 'guppyModelfiles': False, 'directory': False, 'overwrite': False, 'cpu_url': False, 'noguppy': False, 'buildfinished': False, 'models_directory': True, 'cudaversion': True}, 'overwrite': True, 'runMode': 2, 'runTriggers': ['gpu_url'], 'savedWidgetGeometry': b&quot;\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xa8\x00\x00\x00*\x00\x00\x05\xd7\x00\x00\x03'\x00\x00\x02\xa8\x00\x00\x00*\x00\x00\x05\xd7\x00\x00\x03'\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80&quot;, 'triggerReady': {'cpu_url': False, 'trigger': False, 'gpu_url': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'cudaversion': '12.2.0', 'dataVolume': '/data', 'exportGraphics': False, 'gpu_url': 'https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy_6.5.7_linux64.tar.gz', 'inputConnectionsStore': {'gpu_url': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'decompress': False, 'concatenateFile': False, 'guppyCPUurl': False, 'guppyGPUurl': False, 'guppyModelfiles': False, 'directory': False, 'overwrite': False, 'cpu_url': False, 'noguppy': False, 'buildfinished': False, 'models_directory': True, 'cudaversion': True}, 'overwrite': True, 'runMode': 2, 'runTriggers': ['gpu_url'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00&gt;\x00\x00\x00\x89\x00\x00\x03m\x00\x00\x03\x86\x00\x00\x00&gt;\x00\x00\x00\x89\x00\x00\x03m\x00\x00\x03\x86\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'cpu_url': False, 'trigger': False, 'gpu_url': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="6">gAN9cQAoWAMAAABVUkxxAV1xAihYUgAAAGh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9maWxlL2Qv
 MXY5Qjl0ekxmZmlpOFZiY1ZCR2dfNTZJLUxNTU1zU0NkL3ZpZXc/dXNwPXNoYXJpbmdxA1hSAAAA
 aHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xUjdkTlk2ejl2b01HVTlta29wWk5pa2tf
 dHl1U1lKS1Yvdmlldz91c3A9c2hhcmluZ3EEZVgPAAAAY29uY2F0ZW5hdGVGaWxlcQVYAAAAAHEG
-WBIAAABjb250cm9sQXJlYVZpc2libGVxB4hYCgAAAGRlY29tcHJlc3NxCIhYCQAAAGRpcmVjdG9y
-eXEJWBgAAAAvZGF0YS9uYW5vcG9yZS10ZXN0L2RhdGFxClgOAAAAZXhwb3J0R3JhcGhpY3NxC4lY
-FQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEMfXENWAkAAABkaXJlY3RvcnlxDl1xD0sBYXNYBwAA
-AGl0ZXJhdGVxEIlYDwAAAGl0ZXJhdGVTZXR0aW5nc3ERfXESKFgNAAAAaXRlcmFibGVBdHRyc3ET
-XXEUWAMAAABVUkxxFWFYCAAAAG5Xb3JrZXJzcRZLAlgEAAAAZGF0YXEXY2NvbGxlY3Rpb25zCk9y
-ZGVyZWREaWN0CnEYKVJxGShYCQAAAGRpcmVjdG9yeXEafXEbKFgJAAAAZ3JvdXBTaXplcRxYAQAA
-ADFxHVgHAAAAdGhyZWFkc3EeaB1YAwAAAHJhbXEfWAEAAAAwcSB1WAMAAABVUkxxIX1xIihoHGgd
-aB5oHWgfaCB1dVgNAAAAaXRlcmF0ZWRBdHRyc3EjXXEkKGgaaCFldVgIAAAAbldvcmtlcnNxJUsC
-WAkAAABub0Nsb2JiZXJxJolYDgAAAG9wdGlvbnNDaGVja2VkcSd9cSgoWAoAAABkZWNvbXByZXNz
-cSmJWA8AAABjb25jYXRlbmF0ZUZpbGVxKolYCQAAAG5vQ2xvYmJlcnEriXVYBwAAAHJ1bk1vZGVx
-LEsCWAsAAABydW5UcmlnZ2Vyc3EtXXEuWAkAAABkaXJlY3RvcnlxL2FYEwAAAHNhdmVkV2lkZ2V0
-R2VvbWV0cnlxMEMyAdnQywACAAAAAAOrAAAAQgAABpcAAAGzAAADqwAAAEIAAAaXAAABswAAAAAA
-AAAAB4BxMVgMAAAAdHJpZ2dlclJlYWR5cTJ9cTNYCQAAAGRpcmVjdG9yeXE0iHNYBgAAAHVzZUdw
-dXE1iVgMAAAAdXNlU2NoZWR1bGVycTaJWAsAAABfX3ZlcnNpb25fX3E3SwF1Lg==
+WBIAAABjb250cm9sQXJlYVZpc2libGVxB4hYCgAAAGRhdGFWb2x1bWVxCFgFAAAAL3Jvb3RxCVgK
+AAAAZGVjb21wcmVzc3EKiFgJAAAAZGlyZWN0b3J5cQtYGAAAAC9kYXRhL25hbm9wb3JlLXRlc3Qv
+ZGF0YXEMWA4AAABleHBvcnRHcmFwaGljc3ENiVgVAAAAaW5wdXRDb25uZWN0aW9uc1N0b3JlcQ59
+cQ9YCQAAAGRpcmVjdG9yeXEQXXERSwFhc1gHAAAAaXRlcmF0ZXESiVgPAAAAaXRlcmF0ZVNldHRp
+bmdzcRN9cRQoWA0AAABpdGVyYWJsZUF0dHJzcRVdcRZYAwAAAFVSTHEXYVgIAAAAbldvcmtlcnNx
+GEsCWAQAAABkYXRhcRljY29sbGVjdGlvbnMKT3JkZXJlZERpY3QKcRopUnEbKFgJAAAAZGlyZWN0
+b3J5cRx9cR0oWAkAAABncm91cFNpemVxHlgBAAAAMXEfWAcAAAB0aHJlYWRzcSBoH1gDAAAAcmFt
+cSFYAQAAADBxInVYAwAAAFVSTHEjfXEkKGgeaB9oIGgfaCFoInV1WA0AAABpdGVyYXRlZEF0dHJz
+cSVdcSYoaBxoI2V1WAgAAABuV29ya2Vyc3EnSwJYCQAAAG5vQ2xvYmJlcnEoiVgOAAAAb3B0aW9u
+c0NoZWNrZWRxKX1xKihYCgAAAGRlY29tcHJlc3NxK4lYDwAAAGNvbmNhdGVuYXRlRmlsZXEsiVgJ
+AAAAbm9DbG9iYmVycS2JdVgHAAAAcnVuTW9kZXEuSwJYCwAAAHJ1blRyaWdnZXJzcS9dcTBYCQAA
+AGRpcmVjdG9yeXExYVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEyQzIB2dDLAAIAAAAAAH8AAACx
+AAADawAAAiIAAAB/AAAAsQAAA2sAAAIiAAAAAAAAAAAHgHEzWAwAAAB0cmlnZ2VyUmVhZHlxNH1x
+NVgJAAAAZGlyZWN0b3J5cTaIc1gGAAAAdXNlR3B1cTeJWAwAAAB1c2VTY2hlZHVsZXJxOIlYCwAA
+AF9fdmVyc2lvbl9fcTlLAXUu
 </properties>
 		<properties format="pickle" node_id="7">gAN9cQAoWBQAAABhdXRvRGV0ZXJtaW5lUmVnaW9uc3EBiFgFAAAAYmF0Y2hxAlgAAAAAcQNYEgAA
-AGNvbnRyb2xBcmVhVmlzaWJsZXEEiFgOAAAAZXhwb3J0R3JhcGhpY3NxBYhYBgAAAGdlbm9tZXEG
-WAQAAABoZzM4cQdYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEIfXEJWAcAAAB0cmlnZ2VycQpd
-cQtLBGFzWAkAAABpbnB1dEZpbGVxDH1xDShYBAAAAHJvb3RxDlgXAAAAL2RhdGEvbmFub3BvcmUt
-dGVzdC9iYW1xD1gHAAAAcGF0dGVybnEQWAUAAAAqLmJhbXERWAgAAABmaW5kRmlsZXESiFgHAAAA
-ZmluZERpcnETiVgFAAAAdmFsdWVxFF1xFShYKQAAAC9kYXRhL25hbm9wb3JlLXRlc3QvYmFtL0FB
-VzI1NC1zb3J0ZWQuYmFtcRZYKwAAAC9kYXRhL25hbm9wb3JlLXRlc3QvYmFtL0ZBSzMwMjA2LXNv
-cnRlZC5iYW1xF2V1WAcAAABpdGVyYXRlcRiIWA8AAABpdGVyYXRlU2V0dGluZ3NxGX1xGihYDQAA
-AGl0ZXJhYmxlQXR0cnNxG11xHFgJAAAAaW5wdXRGaWxlcR1hWAQAAABkYXRhcR5jY29sbGVjdGlv
-bnMKT3JkZXJlZERpY3QKcR8pUnEgWAkAAABpbnB1dEZpbGVxIX1xIihYCQAAAGdyb3VwU2l6ZXEj
-WAEAAAAxcSRYBwAAAHRocmVhZHNxJWgkWAMAAAByYW1xJlgBAAAAMHEndXNYDQAAAGl0ZXJhdGVk
-QXR0cnNxKF1xKWghYVgIAAAAbldvcmtlcnNxKksCdVgIAAAAbldvcmtlcnNxK0sCWA4AAABvcHRp
-b25zQ2hlY2tlZHEsfXEtKFgGAAAAZ2Vub21lcS6IWAUAAABiYXRjaHEviVgUAAAAYXV0b0RldGVy
-bWluZVJlZ2lvbnNxMIl1WAcAAABydW5Nb2RlcTFLAlgLAAAAcnVuVHJpZ2dlcnNxMl1xM1gHAAAA
-dHJpZ2dlcnE0YVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXE1QzIB2dDLAAIAAAAABFAAAAF5AAAH
-PAAAAucAAARQAAABkQAABzwAAALkAAAAAAAAAAAHgHE2WAwAAAB0cmlnZ2VyUmVhZHlxN31xOGg0
-iHNYBgAAAHVzZUdwdXE5iVgMAAAAdXNlU2NoZWR1bGVycTqJWAsAAABfX3ZlcnNpb25fX3E7SwF1
-Lg==
+AGNvbnRyb2xBcmVhVmlzaWJsZXEEiFgKAAAAZGF0YVZvbHVtZXEFWAUAAAAvZGF0YXEGWA4AAABl
+eHBvcnRHcmFwaGljc3EHiFgGAAAAZ2Vub21lcQhYBAAAAGhnMzhxCVgVAAAAaW5wdXRDb25uZWN0
+aW9uc1N0b3JlcQp9cQtYBwAAAHRyaWdnZXJxDF1xDUsEYXNYCQAAAGlucHV0RmlsZXEOfXEPKFgE
+AAAAcm9vdHEQWBcAAAAvZGF0YS9uYW5vcG9yZS10ZXN0L2JhbXERWAcAAABwYXR0ZXJucRJYBQAA
+ACouYmFtcRNYCAAAAGZpbmRGaWxlcRSIWAcAAABmaW5kRGlycRWJWAUAAAB2YWx1ZXEWXXEXdVgH
+AAAAaXRlcmF0ZXEYiFgPAAAAaXRlcmF0ZVNldHRpbmdzcRl9cRooWA0AAABpdGVyYWJsZUF0dHJz
+cRtdcRxYCQAAAGlucHV0RmlsZXEdYVgEAAAAZGF0YXEeY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0
+CnEfKVJxIFgJAAAAaW5wdXRGaWxlcSF9cSIoWAkAAABncm91cFNpemVxI1gBAAAAMXEkWAcAAAB0
+aHJlYWRzcSVoJFgDAAAAcmFtcSZYAQAAADBxJ3VzWA0AAABpdGVyYXRlZEF0dHJzcShdcSloIWFY
+CAAAAG5Xb3JrZXJzcSpLAnVYCAAAAG5Xb3JrZXJzcStLAlgOAAAAb3B0aW9uc0NoZWNrZWRxLH1x
+LShYBgAAAGdlbm9tZXEuiFgFAAAAYmF0Y2hxL4lYFAAAAGF1dG9EZXRlcm1pbmVSZWdpb25zcTCJ
+dVgHAAAAcnVuTW9kZXExSwJYCwAAAHJ1blRyaWdnZXJzcTJdcTNYBwAAAHRyaWdnZXJxNGFYEwAA
+AHNhdmVkV2lkZ2V0R2VvbWV0cnlxNUMyAdnQywACAAAAAAAAAAAAAAAAB38AAAQZAAAAAAAAABgA
+AAd/AAAEFgAAAAACAAAAB4BxNlgMAAAAdHJpZ2dlclJlYWR5cTd9cThoNIhzWAYAAAB1c2VHcHVx
+OYlYDAAAAHVzZVNjaGVkdWxlcnE6iVgLAAAAX192ZXJzaW9uX19xO0sBdS4=
 </properties>
 	</node_properties>
 </scheme>

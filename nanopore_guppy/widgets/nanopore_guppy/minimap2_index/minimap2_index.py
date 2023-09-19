@@ -19,7 +19,7 @@ class OWminimap2_index(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/minimap2-index"
     docker_image_tag = "latest"
-    inputs = [("indexfile",str,"handleInputsindexfile"),("RefGenome",str,"handleInputsRefGenome"),("trigger",str,"handleInputstrigger")]
+    inputs = [("indexfile",str,"handleInputsindexfile"),("RefGenome",str,"handleInputsRefGenome"),("trigger",str,"handleInputstrigger"),("dataVolume",str,"handleInputsdataVolume")]
     outputs = [("indexfile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -38,6 +38,7 @@ class OWminimap2_index(OWBwBWidget):
     altcontigs=pset(None)
     altdrop=pset(0.15)
     overwrite=pset(False)
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"minimap2_index")) as f:
@@ -59,6 +60,11 @@ class OWminimap2_index(OWBwBWidget):
     def handleInputstrigger(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("trigger", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):

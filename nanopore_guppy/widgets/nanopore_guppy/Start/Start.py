@@ -19,6 +19,7 @@ class OWStart(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/nanopore-start"
     docker_image_tag = "latest"
+    inputs = [("dataVolume",str,"handleInputsdataVolume")]
     outputs = [("data_dir",str),("genome_dir",str),("genome_file",str),("indexfile",str),("gpu_url",str),("models_dir",str),("fastq_dir",str),("bam_dir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -35,6 +36,7 @@ class OWStart(OWBwBWidget):
     gpu_url=pset(None)
     fastq_dir=pset(None)
     bam_dir=pset(None)
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
@@ -43,6 +45,11 @@ class OWStart(OWBwBWidget):
         self.initVolumes()
         self.inputConnections = ConnectionDict(self.inputConnectionsStore)
         self.drawGUI()
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue=None
         if hasattr(self,"data_dir"):

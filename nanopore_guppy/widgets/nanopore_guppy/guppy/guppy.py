@@ -19,7 +19,7 @@ class OWguppy(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/guppy"
     docker_image_tag = "gpu"
-    inputs = [("InputDir",str,"handleInputsInputDir"),("trigger",str,"handleInputstrigger"),("fastqdir",str,"handleInputsfastqdir"),("trigger2",str,"handleInputstrigger2")]
+    inputs = [("InputDir",str,"handleInputsInputDir"),("trigger",str,"handleInputstrigger"),("fastqdir",str,"handleInputsfastqdir"),("trigger2",str,"handleInputstrigger2"),("dataVolume",str,"handleInputsdataVolume")]
     outputs = [("OutputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -40,6 +40,7 @@ class OWguppy(OWBwBWidget):
     numCallers=pset(None)
     gpuRunnersPerDevice=pset(None)
     fastqdir=pset(None)
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"guppy")) as f:
@@ -66,6 +67,11 @@ class OWguppy(OWBwBWidget):
     def handleInputstrigger2(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("trigger2", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):

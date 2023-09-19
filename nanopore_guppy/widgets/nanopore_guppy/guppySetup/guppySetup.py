@@ -19,7 +19,7 @@ class OWguppySetup(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/guppy-setup"
     docker_image_tag = "latest"
-    inputs = [("gpu_url",str,"handleInputsgpu_url"),("trigger",str,"handleInputstrigger")]
+    inputs = [("gpu_url",str,"handleInputsgpu_url"),("trigger",str,"handleInputstrigger"),("dataVolume",str,"handleInputsdataVolume")]
     outputs = [("gpu_url",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -31,6 +31,7 @@ class OWguppySetup(OWBwBWidget):
     gpu_url=pset(None)
     overwrite=pset(False)
     cudaversion=pset("11.3.1")
+    dataVolume=pset("/root")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"guppySetup")) as f:
@@ -47,6 +48,11 @@ class OWguppySetup(OWBwBWidget):
     def handleInputstrigger(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("trigger", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdataVolume(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dataVolume", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
