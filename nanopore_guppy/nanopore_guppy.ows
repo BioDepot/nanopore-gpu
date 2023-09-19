@@ -60,9 +60,9 @@ AGZsb3djZWxscVKJWAcAAABraXRuYW1lcVOJWA0AAABjb21wcmVzc2Zhc3RxcVSJWA8AAABjaHVu
 a3NQZXJSdW5uZXJxVYlYCgAAAG51bUNhbGxlcnNxVolYEwAAAGdwdVJ1bm5lcnNQZXJEZXZpY2Vx
 V4l1WAcAAABydW5Nb2RlcVhLAlgLAAAAcnVuVHJpZ2dlcnNxWV1xWihYBwAAAHRyaWdnZXJxW1gI
 AAAAdHJpZ2dlcjJxXFgIAAAAZmFzdHFkaXJxXWVYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxXkMy
-AdnQywACAAAAAABJAAABAQAAA30AAANOAAAASQAAARkAAAN9AAADSwAAAAAAAAAAB4BxX1gMAAAA
+AdnQywACAAAAAABJAAABAQAAA30AAAMzAAAASQAAAQEAAAN9AAADMwAAAAAAAAAAB4BxX1gMAAAA
 dHJpZ2dlclJlYWR5cWB9cWEoWAgAAABJbnB1dERpcnFiiVgHAAAAdHJpZ2dlcnFjiFgJAAAAT3V0
-cHV0RGlycWSJaFyIaF2IdVgGAAAAdXNlR3B1cWWJWAwAAAB1c2VTY2hlZHVsZXJxZolYCwAAAF9f
+cHV0RGlycWSJaFyIaF2IdVgGAAAAdXNlR3B1cWWIWAwAAAB1c2VTY2hlZHVsZXJxZolYCwAAAF9f
 dmVyc2lvbl9fcWdLAXUu
 </properties>
 		<properties format="literal" node_id="1">{'RefGenome': '/data/nanopore-test/genome/hg38.fa.gz', 'altcontigs': '', 'altdrop': 0.15, 'controlAreaVisible': True, 'dataVolume': '/data', 'exportGraphics': False, 'hpcminimizer': False, 'idxnoseq': False, 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {'refGenome': [1], 'indexfile': [1], 'RefGenome': [1], 'trigger': [6]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'kmersize': 15, 'maxload': '', 'nWorkers': 1, 'optionsChecked': {'kmersize': False, 'windowsize': False, 'hpcminimizer': False, 'maxload': False, 'idxnoseq': False, 'altcontigs': False, 'altdrop': False, 'overwrite': False}, 'overwrite': False, 'runMode': 2, 'runTriggers': ['indexfile', 'RefGenome', 'trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00d\x00\x00\x00\xa9\x00\x00\x03\xa2\x00\x00\x03K\x00\x00\x00d\x00\x00\x00\xc1\x00\x00\x03\xa2\x00\x00\x03H\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'trigger': True, 'indexfile': True, 'refGenome': False, 'RefGenome': True}, 'useGpu': False, 'useScheduler': False, 'windowsize': 0, '__version__': 1}</properties>
@@ -82,7 +82,7 @@ cHRpb25zQ2hlY2tlZHEvfXEwWA0AAABvcHRpb25hbGZsYWdzcTGIc1gJAAAAb3V0cHV0ZGlycTJY
 FwAAAC9kYXRhL25hbm9wb3JlLXRlc3QvYmFtcTNYBwAAAHJ1bk1vZGVxNEsCWAsAAABydW5Ucmln
 Z2Vyc3E1XXE2KFgHAAAAdHJpZ2dlcnE3WAkAAABpbmRleGZpbGVxOGVYEwAAAHNhdmVkV2lkZ2V0
 R2VvbWV0cnlxOUMyAdnQywACAAAAAABrAAAA2AAAA3sAAAMnAAAAawAAAPAAAAN7AAADJAAAAAAA
-AAAAB4BxOlgMAAAAdHJpZ2dlclJlYWR5cTt9cTwoaDeIaDiIdVgGAAAAdXNlR3B1cT2JWAwAAAB1
+AAAAB4BxOlgMAAAAdHJpZ2dlclJlYWR5cTt9cTwoaDeJaDiIdVgGAAAAdXNlR3B1cT2JWAwAAAB1
 c2VTY2hlZHVsZXJxPolYCwAAAF9fdmVyc2lvbl9fcT9LAXUu
 </properties>
 		<properties format="literal" node_id="3">{'bam_dir': '/data/nanopore-test/bam', 'controlAreaVisible': True, 'dataVolume': '/root', 'data_dir': '/data/nanopore-test/data', 'exportGraphics': False, 'fastq_dir': '/data/nanopore-test/fastq', 'genome_dir': '/data/nanopore-test/genome', 'genome_file': '/data/nanopore-test/genome/hg38.fa.gz', 'gpu_url': 'https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy_6.5.7_linux64.tar.gz', 'indexfile': '/data/nanopore-test/genome/hg38.idx', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'models_dir': '', 'nWorkers': 1, 'optionsChecked': {'gdc_credentials': False, 'gdc_token': False, 'clean_files': False, 'fastq_files': False, 'fastq1_files': False, 'fastq2_files': False, 'fastqo1_files': False, 'fastqo2_files': False, 'fastqs_files': False, 'fastqc_files': False, 'paired_end': False, 'realigned_files': False, 'recalibrate_files': False, 'realigned_indels_files': False, 'pindel_filter_files': False, 'genome_dict_file': False, 'biobambam_files': False, 'mutect2_normal_files': False, 'mutect2_tumor_files': False, 'mutect2_variants_files': False, 'variant_annotation_files': False, 'maf_files': False, 'mark_dupes_outputs': False, 'mark_dupes_metrics': False, 'coclean_intervals': False, 'somatic_sniper_files': False, 'prepend_date': False, 'varscan_pileup_files': False, 'varscan_snp_files': False, 'varscan_indel_files': False, 'muse_call_files': False, 'muse_sump_input_files': False, 'muse_sump_output_files': False, 'pindel_config_files': False, 'pindel_variants_files': False, 'pindel_variants_sorted_files': False, 'pindel_variants_filtered_files': False, 'pindel_prefix_files': False, 'cpu_url': False, 'gpu_url': True, 'models_dir': False}, 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\x1b\x00\x00\x00w\x00\x00\x03\xc9\x00\x00\x02\xd6\x00\x00\x00\x1b\x00\x00\x00w\x00\x00\x03\xc9\x00\x00\x02\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
@@ -139,7 +139,7 @@ CAAAAG5Xb3JrZXJzcSpLAnVYCAAAAG5Xb3JrZXJzcStLAlgOAAAAb3B0aW9uc0NoZWNrZWRxLH1x
 LShYBgAAAGdlbm9tZXEuiFgFAAAAYmF0Y2hxL4lYFAAAAGF1dG9EZXRlcm1pbmVSZWdpb25zcTCJ
 dVgHAAAAcnVuTW9kZXExSwJYCwAAAHJ1blRyaWdnZXJzcTJdcTNYBwAAAHRyaWdnZXJxNGFYEwAA
 AHNhdmVkV2lkZ2V0R2VvbWV0cnlxNUMyAdnQywACAAAAAAAAAAAAAAAAB38AAAQZAAAAAAAAABgA
-AAd/AAAEFgAAAAACAAAAB4BxNlgMAAAAdHJpZ2dlclJlYWR5cTd9cThoNIhzWAYAAAB1c2VHcHVx
+AAd/AAAEFgAAAAACAAAAB4BxNlgMAAAAdHJpZ2dlclJlYWR5cTd9cThoNIlzWAYAAAB1c2VHcHVx
 OYlYDAAAAHVzZVNjaGVkdWxlcnE6iVgLAAAAX192ZXJzaW9uX19xO0sBdS4=
 </properties>
 	</node_properties>
